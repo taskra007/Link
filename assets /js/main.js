@@ -45,3 +45,22 @@ gsap.from('.home__img-4', 1, {opacity: 0, y: 200, delay: 5, ease: "bounce.out"})
 gsap.from('.home__img-13', 1, {opacity: 0, y: 200, delay: 5.5, ease: "back.out(1.2)"})
 gsap.from('.home__img-12', 1, {opacity: 0, y: 200, delay: 5.5, ease: "back.out(1.2)"})
 gsap.from('.home__title', 1, {opacity: 0, y: 200, delay: 6, ease: "back.out(1.2)"})
+
+const popup = document.getElementById("popup");
+const popupWish = document.getElementById("popupWish");
+
+document.getElementById("openWish").onclick = () => {
+  const name = document.getElementById("nameInput")?.value;
+
+  if(name){
+    popupWish.innerText = `Merry Christmas ${name} ❤️`;
+  }else{
+    popupWish.innerText = "Merry Christmas ❤️";
+  }
+
+  popup.style.display = "flex";
+};
+
+document.getElementById("closePopup").onclick = () => {
+  popup.style.display = "none";
+};
